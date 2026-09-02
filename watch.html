@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Watch – AniVerse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+    <a href="index.html" class="nav-logo">Ani<span>Verse</span></a>
+    <div style="width:80px"></div>
+  </nav>
+
+  <!-- WATCH PAGE CONTENT -->
+  <div class="watch-page" id="watchPage">
+
+    <!-- Anime Info Banner -->
+    <div class="anime-info-banner" id="animeBanner">
+      <img id="infoPoster" class="info-poster" src="" alt="" />
+      <div class="info-details">
+        <span class="info-genre-badge" id="infoGenre">Loading...</span>
+        <h1 class="info-title" id="infoTitle">Loading...</h1>
+        <div class="info-rating" id="infoRating">★ —</div>
+        <p class="info-desc" id="infoDesc">Loading anime details...</p>
+      </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="player-section">
+      <div class="player-wrap">
+        <iframe id="player" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+      </div>
+      <div class="player-label">Now Playing: <span id="nowPlayingLabel">—</span></div>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="lang-section">
+      <div class="lang-label">Audio Track</div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btnSub" onclick="setLang('SUB')">SUB</button>
+        <button class="lang-btn" id="btnDub" onclick="setLang('DUB')">DUB</button>
+      </div>
+    </div>
+
+    <!-- Episode Grid -->
+    <div>
+      <div class="ep-section-label">Episodes</div>
+      <div class="episode-grid" id="episodeGrid"></div>
+    </div>
+
+  </div>
+
+  <!-- Not Found fallback -->
+  <div class="not-found" id="notFound" style="display:none">
+    <h2>Anime Not Found</h2>
+    <p>We couldn't find that anime in the database.</p>
+    <a href="index.html" class="go-home">Go Back Home</a>
+  </div>
+
+  <script src="anime_database.js"></script>
+  <script src="watch.js"></script>
+</body>
+</html>
