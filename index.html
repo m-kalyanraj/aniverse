@@ -3,50 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AniVerse – Discover Anime</title>
+  <meta name="referrer" content="no-referrer" />
+  <title>AniVerse – Discover & Watch Anime</title>
+  <meta name="description" content="Discover 500+ anime titles across Action, Romance, Isekai, Sci-Fi, and Fantasy with high-definition official trailers, synopsis, and episode streaming on AniVerse." />
+  <link rel="canonical" href="https://aniverseweb.netlify.app/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aniverseweb.netlify.app/" />
+  <meta property="og:title" content="AniVerse – Discover & Watch Anime" />
+  <meta property="og:description" content="Explore an epic universe of 500+ titles with high-definition official trailers, episode streaming, and full descriptions." />
+  <meta property="og:image" content="https://aniverseweb.netlify.app/favicon.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="https://aniverseweb.netlify.app/" />
+  <meta property="twitter:title" content="AniVerse – Discover & Watch Anime" />
+  <meta property="twitter:description" content="Explore an epic universe of 500+ titles with high-definition official trailers, episode streaming, and full descriptions." />
+  <meta property="twitter:image" content="https://aniverseweb.netlify.app/favicon.svg" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="nav-logo">Ani<span>Verse</span></a>
+    <a class="nav-logo" href="index.html">Ani<span>Verse</span></a>
     <div class="nav-search">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="searchInput" placeholder="Search anime..." autocomplete="off" />
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search 500+ anime by title or genre..." autocomplete="off" aria-label="Search anime shows by title or genre" />
     </div>
+    <div style="width: 20px;"></div>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Your Anime Universe</h1>
-    <p>500+ anime series – click any cover to start watching</p>
-  </div>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h1>Discover Your Next Favorite Anime</h1>
+    <p>Explore an epic universe of 500+ titles with high-definition official trailers, episode streaming, and full descriptions.</p>
+    <div class="hero-stats">
+      <div><span>500+</span> Real Anime</div>
+      <div>•</div>
+      <div><span>5</span> Main Genres</div>
+      <div>•</div>
+      <div><span>100%</span> Trailers Available</div>
+      <div>•</div>
+      <div><span>HD</span> SUB & DUB</div>
+    </div>
+  </header>
 
-  <!-- GENRE FILTERS -->
-  <div class="filters" id="filters">
-    <button class="filter-btn active" data-genre="all">All</button>
+  <!-- GENRE FILTER BUTTONS -->
+  <nav class="filters" id="genreFilters" aria-label="Genre Filters">
+    <button class="filter-btn active" data-genre="all">All Anime</button>
     <button class="filter-btn" data-genre="Action">Action</button>
     <button class="filter-btn" data-genre="Romance">Romance</button>
     <button class="filter-btn" data-genre="Isekai">Isekai</button>
-    <button class="filter-btn" data-genre="Fantasy">Fantasy</button>
     <button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button>
-    <button class="filter-btn" data-genre="Thriller">Thriller</button>
-    <button class="filter-btn" data-genre="Slice of Life">Slice of Life</button>
-    <button class="filter-btn" data-genre="Mecha">Mecha</button>
-    <button class="filter-btn" data-genre="Sports">Sports</button>
-    <button class="filter-btn" data-genre="Historical">Historical</button>
-    <button class="filter-btn" data-genre="Supernatural">Supernatural</button>
-  </div>
+    <button class="filter-btn" data-genre="Fantasy">Fantasy</button>
+  </nav>
 
-  <!-- GRID -->
-  <div class="section-wrap">
+  <!-- ANIME GRID SECTION -->
+  <main class="section-wrap">
+    <div class="section-header">
+      <h2 class="section-title" id="sectionTitle">
+        Popular Anime
+      </h2>
+      <span class="section-count" id="resultCount">Showing 24 shows</span>
+    </div>
+
+    <!-- The dynamic card grid -->
     <div class="anime-grid" id="animeGrid"></div>
+
+    <!-- Load More Pagination -->
     <div class="load-more-wrap">
-      <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+      <button class="load-more-btn" id="loadMoreBtn">
+        Load More Anime
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <!-- UPGRADED TRAILER MODAL -->
+  <div class="modal-backdrop" id="trailerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <!-- Close Button -->
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- 16:9 Video Player -->
+      <div class="modal-video-container">
+        <iframe
+          id="modalPlayer"
+          src=""
+          title="Anime Trailer Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Info & Actions -->
+      <div class="modal-content">
+        <div class="modal-header-row">
+          <div class="modal-title-group">
+            <h2 class="modal-title" id="modalTitle">Loading Anime...</h2>
+            <div class="modal-badges">
+              <span class="modal-badge-genre" id="modalGenre">Genre</span>
+              <span class="modal-badge-rating" id="modalRating">★ —</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="modal-desc" id="modalDesc">Loading description...</p>
+
+        <div class="modal-actions">
+          <a class="btn-primary-watch" id="modalWatchLink" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Watch Full Episodes
+          </a>
+
+          <a class="btn-secondary-yt" id="modalYtLink" href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            Open on YouTube
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Ani<span>Verse</span> © 2026. Discover, watch trailers, and stream real anime.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
   <script src="anime_database.js"></script>
   <script src="app.js"></script>
 </body>

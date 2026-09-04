@@ -3,19 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
   <title id="pageTitle">Watch – AniVerse</title>
+  <meta name="description" content="Watch high-definition anime trailers, episodes, and previews with SUB and DUB audio track options on AniVerse." />
+  <link rel="canonical" href="https://aniverseweb.netlify.app/watch.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="video.other" />
+  <meta property="og:url" content="https://aniverseweb.netlify.app/watch.html" />
+  <meta property="og:title" content="Watch Anime – AniVerse" />
+  <meta property="og:description" content="Stream high-definition anime trailers and episodes with multi-audio support on AniVerse." />
+  <meta property="og:image" content="https://aniverseweb.netlify.app/favicon.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="https://aniverseweb.netlify.app/watch.html" />
+  <meta property="twitter:title" content="Watch Anime – AniVerse" />
+  <meta property="twitter:description" content="Stream high-definition anime trailers and episodes with multi-audio support on AniVerse." />
+  <meta property="twitter:image" content="https://aniverseweb.netlify.app/favicon.svg" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      Back
+    <a class="nav-back" href="index.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      Back to Home
     </a>
-    <a href="index.html" class="nav-logo">Ani<span>Verse</span></a>
-    <div style="width:80px"></div>
+    <a class="nav-logo" href="index.html">Ani<span>Verse</span></a>
+    <div style="width: 20px;"></div>
   </nav>
 
   <!-- WATCH PAGE CONTENT -->
@@ -23,11 +44,23 @@
 
     <!-- Anime Info Banner -->
     <div class="anime-info-banner" id="animeBanner">
-      <img id="infoPoster" class="info-poster" src="" alt="" />
+      <div class="info-poster-wrap">
+        <img
+          id="infoPoster"
+          class="info-poster"
+          src=""
+          alt="Anime Poster"
+          width="180"
+          height="270"
+          referrerpolicy="no-referrer"
+        />
+      </div>
       <div class="info-details">
-        <span class="info-genre-badge" id="infoGenre">Loading...</span>
+        <div class="info-badges-row">
+          <span class="info-genre-badge" id="infoGenre">Loading...</span>
+          <div class="info-rating" id="infoRating">★ —</div>
+        </div>
         <h1 class="info-title" id="infoTitle">Loading...</h1>
-        <div class="info-rating" id="infoRating">★ —</div>
         <p class="info-desc" id="infoDesc">Loading anime details...</p>
       </div>
     </div>
@@ -35,7 +68,13 @@
     <!-- Video Player -->
     <div class="player-section">
       <div class="player-wrap">
-        <iframe id="player" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+        <iframe
+          id="player"
+          src=""
+          title="Anime Episode Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="player-label">Now Playing: <span id="nowPlayingLabel">—</span></div>
     </div>
@@ -44,8 +83,8 @@
     <div class="lang-section">
       <div class="lang-label">Audio Track</div>
       <div class="lang-toggle">
-        <button class="lang-btn active" id="btnSub" onclick="setLang('SUB')">SUB</button>
-        <button class="lang-btn" id="btnDub" onclick="setLang('DUB')">DUB</button>
+        <button class="lang-btn active" id="btnSub" onclick="setLang('SUB')" aria-pressed="true">SUB</button>
+        <button class="lang-btn" id="btnDub" onclick="setLang('DUB')" aria-pressed="false">DUB</button>
       </div>
     </div>
 
@@ -60,9 +99,14 @@
   <!-- Not Found fallback -->
   <div class="not-found" id="notFound" style="display:none">
     <h2>Anime Not Found</h2>
-    <p>We couldn't find that anime in the database.</p>
-    <a href="index.html" class="go-home">Go Back Home</a>
+    <p>We couldn't find that title in the AniVerse database.</p>
+    <a class="go-home" href="index.html">Go Back to Discover</a>
   </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Ani<span>Verse</span> © 2026. High quality anime trailers & streaming.</p>
+  </footer>
 
   <script src="anime_database.js"></script>
   <script src="watch.js"></script>
