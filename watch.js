@@ -117,7 +117,7 @@ function loadEpisode(ep, lang) {
   const label = document.getElementById("nowPlayingLabel");
 
   if (player) {
-    player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`;
+    player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
   }
 
   if (label) {

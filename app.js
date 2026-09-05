@@ -242,7 +242,7 @@ function openTrailerModal(idOrTitle) {
   modalYtLink.href = `https://www.youtube.com/watch?v=${anime.youtubeId}`;
 
   // Embed YouTube Trailer with autoplay
-  player.src = `https://www.youtube.com/embed/${anime.youtubeId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`;
+  player.src = `https://www.youtube.com/embed/${anime.youtubeId}?autoplay=1&rel=0&modestbranding=1`;
 
   // Display modal with animation
   modal.classList.add("active");

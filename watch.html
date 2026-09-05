@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="referrer" content="no-referrer" />
+  <meta name="referrer" content="origin-when-cross-origin" />
   <title id="pageTitle">Watch – AniVerse</title>
   <meta name="description" content="Watch high-definition anime trailers, episodes, and previews with SUB and DUB audio track options on AniVerse." />
   <link rel="canonical" href="https://aniverseweb.netlify.app/watch.html" />
@@ -23,6 +23,11 @@
   <meta property="twitter:description" content="Stream high-definition anime trailers and episodes with multi-audio support on AniVerse." />
   <meta property="twitter:image" content="https://aniverseweb.netlify.app/favicon.svg" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -30,17 +35,17 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <a class="nav-back" href="index.html">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
         <polyline points="15 18 9 12 15 6"></polyline>
       </svg>
       Back to Home
     </a>
     <a class="nav-logo" href="index.html">Ani<span>Verse</span></a>
-    <div style="width: 20px;"></div>
+    <div style="width: 20px;" aria-hidden="true"></div>
   </nav>
 
   <!-- WATCH PAGE CONTENT -->
-  <div class="watch-page" id="watchPage">
+  <main class="watch-page" id="watchPage">
 
     <!-- Anime Info Banner -->
     <div class="anime-info-banner" id="animeBanner">
@@ -83,8 +88,8 @@
     <div class="lang-section">
       <div class="lang-label">Audio Track</div>
       <div class="lang-toggle">
-        <button class="lang-btn active" id="btnSub" onclick="setLang('SUB')" aria-pressed="true">SUB</button>
-        <button class="lang-btn" id="btnDub" onclick="setLang('DUB')" aria-pressed="false">DUB</button>
+        <button class="lang-btn active" id="btnSub" type="button" onclick="setLang('SUB')" aria-pressed="true">SUB</button>
+        <button class="lang-btn" id="btnDub" type="button" onclick="setLang('DUB')" aria-pressed="false">DUB</button>
       </div>
     </div>
 
@@ -94,7 +99,7 @@
       <div class="episode-grid" id="episodeGrid"></div>
     </div>
 
-  </div>
+  </main>
 
   <!-- Not Found fallback -->
   <div class="not-found" id="notFound" style="display:none">
