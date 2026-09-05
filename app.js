@@ -193,6 +193,72 @@ function renderGrid() {
       loadMoreBtn.style.display = "inline-flex";
     }
   }
+
+  // Manage Trending Section visibility during active search or specific genre filter
+  const trendingSection = document.getElementById("trendingSection");
+  if (trendingSection) {
+    if (searchQuery.trim() || currentGenre !== "all") {
+      trendingSection.style.display = "none";
+    } else {
+      trendingSection.style.display = "";
+    }
+  }
+}
+
+// ---- Render Trending Showcase ----
+function renderTrending() {
+  const trendingGrid = document.getElementById("trendingGrid");
+  if (!trendingGrid) return;
+
+  // Curate top 6 trending anime by rating & prominence
+  const trendingCandidates = ["Attack on Titan", "Fullmetal Alchemist: B", "Hunter x Hunter", "Demon Slayer", "One Piece", "Death Note"];
+  const trendingItems = [];
+
+  trendingCandidates.forEach(title => {
+    const found = animeList.find(a => a.title.toLowerCase() === title.toLowerCase() || a.title.toLowerCase().includes(title.toLowerCase()));
+    if (found && !trendingItems.some(item => item.id === found.id)) {
+      trendingItems.push(found);
+    }
+  });
+
+  // Fallback if candidates not found
+  if (trendingItems.length < 6) {
+    const sorted = [...animeList].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    for (const anime of sorted) {
+      if (!trendingItems.some(item => item.id === anime.id)) {
+        trendingItems.push(anime);
+        if (trendingItems.length >= 6) break;
+      }
+    }
+  }
+
+  trendingGrid.innerHTML = trendingItems.map((anime, idx) => {
+    const safeTitle = anime.title.replace(/"/g, '&quot;');
+    return `
+      <article class="trending-card" data-id="${anime.id}" tabindex="0" role="button" aria-label="Trending #${idx + 1}: ${safeTitle}">
+        <span class="trend-rank-badge">#${idx + 1}</span>
+        <div class="trending-poster-wrap">
+          <img
+            class="trending-poster"
+            src="${anime.image}"
+            alt="${safeTitle} Poster"
+            loading="lazy"
+            width="240"
+            height="336"
+            referrerpolicy="no-referrer"
+            onerror="handleImageError(this, ${anime.id})"
+          />
+        </div>
+        <div class="trending-info">
+          <h3 class="trending-title" title="${safeTitle}">${anime.title}</h3>
+          <div class="trending-meta">
+            <span>${anime.genre}</span>
+            <span style="color:#fbbf24; font-weight:700;">★ ${anime.rating}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
 }
 
 // ==========================================================================
@@ -284,8 +350,38 @@ window.closeTrailerModal = closeTrailerModal;
 // EVENT LISTENERS & INITIALIZATION
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Initial grid render
+  // 1. Initial grid and trending render
   renderGrid();
+  renderTrending();
+
+  // Hero Spotlight "Watch Trailer" button
+  const heroTrailerBtn = document.getElementById("heroTrailerBtn");
+  if (heroTrailerBtn) {
+    heroTrailerBtn.addEventListener("click", () => {
+      openTrailerModal("Attack on Titan");
+    });
+  }
+
+  // Trending cards click & keyboard activation
+  const trendingGrid = document.getElementById("trendingGrid");
+  if (trendingGrid) {
+    trendingGrid.addEventListener("click", e => {
+      const card = e.target.closest(".trending-card");
+      if (!card) return;
+      const id = card.getAttribute("data-id");
+      openTrailerModal(id);
+    });
+
+    trendingGrid.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        const card = e.target.closest(".trending-card");
+        if (!card) return;
+        e.preventDefault();
+        const id = card.getAttribute("data-id");
+        openTrailerModal(id);
+      }
+    });
+  }
 
   // 2. Real-time Search input listener with lightweight debounce
   const searchInput = document.getElementById("searchInput");

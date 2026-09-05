@@ -34,7 +34,10 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a class="nav-logo" href="index.html">Ani<span>Verse</span></a>
+    <div class="nav-brand-group">
+      <a class="nav-logo" href="index.html">Ani<span>Verse</span></a>
+      <span class="nav-badge">HD Discovery</span>
+    </div>
     <div class="nav-search">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
         <circle cx="11" cy="11" r="8"/>
@@ -44,29 +47,74 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <h1>Discover Your Next Favorite Anime</h1>
-    <p>Explore an epic universe of 500+ titles with high-definition official trailers, episode streaming, and full descriptions.</p>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <span class="stat-value">500+</span>
-        <span class="stat-label">Real Anime</span>
+  <!-- CINEMATIC FEATURED HERO SPOTLIGHT -->
+  <header class="hero-spotlight" id="heroSpotlight">
+    <div class="hero-spotlight-bg" aria-hidden="true"></div>
+    <div class="hero-spotlight-overlay" aria-hidden="true"></div>
+    <div class="hero-spotlight-content">
+      <div class="hero-spotlight-badges">
+        <span class="spotlight-badge-featured">Featured Spotlight</span>
+        <span class="spotlight-badge-rating">★ 9.1</span>
+        <span class="spotlight-badge-genre">Action</span>
       </div>
-      <div class="stat-card">
-        <span class="stat-value">5</span>
-        <span class="stat-label">Main Genres</span>
+      <h1 class="hero-spotlight-title">Attack on Titan</h1>
+      <p class="hero-spotlight-desc">
+        Humans live inside walled cities to escape giant humanoid monsters known as Titans. When the outer wall falls, the battle for humanity's survival begins.
+      </p>
+      <div class="hero-spotlight-actions">
+        <button class="hero-btn-primary" id="heroTrailerBtn" type="button" aria-label="Watch Attack on Titan trailer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Watch Trailer
+        </button>
+        <a class="hero-btn-secondary" id="heroWatchBtn" href="watch.html?id=Attack%20on%20Titan" aria-label="Stream Attack on Titan episodes">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+            <line x1="7" y1="2" x2="7" y2="22"/>
+            <line x1="17" y1="2" x2="17" y2="22"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <line x1="2" y1="7" x2="7" y2="7"/>
+            <line x1="2" y1="17" x2="7" y2="17"/>
+            <line x1="17" y1="17" x2="22" y2="17"/>
+            <line x1="17" y1="7" x2="22" y2="7"/>
+          </svg>
+          Stream Episodes
+        </a>
       </div>
-      <div class="stat-card">
-        <span class="stat-value">100%</span>
-        <span class="stat-label">Trailers</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-value">HD</span>
-        <span class="stat-label">SUB & DUB</span>
+
+      <!-- Quick Platform Stats -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-value">500+</span>
+          <span class="stat-label">Real Anime</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">5</span>
+          <span class="stat-label">Main Genres</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Trailers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">HD</span>
+          <span class="stat-label">SUB & DUB</span>
+        </div>
       </div>
     </div>
   </header>
+
+  <!-- TRENDING NOW SECTION -->
+  <section class="trending-section" id="trendingSection" aria-label="Trending Anime Section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Trending Now</h2>
+        <p class="section-subtitle">Top-rated anime across the AniVerse community</p>
+      </div>
+    </div>
+    <div class="trending-scroll" id="trendingGrid"></div>
+  </section>
 
   <!-- GENRE FILTER BUTTONS -->
   <nav class="filters" id="genreFilters" aria-label="Genre Filters">
@@ -81,9 +129,10 @@
   <!-- ANIME GRID SECTION -->
   <main class="section-wrap">
     <div class="section-header">
-      <h2 class="section-title" id="sectionTitle">
-        Popular Anime
-      </h2>
+      <div>
+        <h2 class="section-title" id="sectionTitle">Popular Anime</h2>
+        <p class="section-subtitle" id="sectionSubtitle">Browse the complete verified collection</p>
+      </div>
       <span class="section-count" id="resultCount">Showing 24 shows</span>
     </div>
 
