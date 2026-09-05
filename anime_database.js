@@ -137,7 +137,7 @@ const preseededCache = {
     },
     "bahamut: genesis": {
         image: "https://media.kitsu.app/anime/poster_images/8195/large.jpg",
-        youtubeId: "PtGRj71HMFA"
+        youtubeId: "pRl8j1PjShM"
     },
     "bahamut: virgin s.": {
         image: "https://media.kitsu.app/anime/poster_images/10902/large.jpg",
@@ -157,7 +157,7 @@ const preseededCache = {
     },
     "berserk": {
         image: "https://media.kitsu.app/anime/24/poster_image/large-8b69ef8e3f4f4359af304e9b664eef0f.jpeg",
-        youtubeId: "dVPzv9qwKl0"
+        youtubeId: "0MIw4xzxcTU"
     },
     "black bullet": {
         image: "https://media.kitsu.app/anime/poster_images/8052/large.jpg",
@@ -173,7 +173,7 @@ const preseededCache = {
     },
     "black summoner": {
         image: "https://media.kitsu.app/anime/45884/poster_image/large-440b2b11f508b045582bdbf663fdc9ac.jpeg",
-        youtubeId: "m3W8sZhn3-o"
+        youtubeId: "JH1Bt-AAKlk"
     },
     "bleach": {
         image: "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
@@ -281,7 +281,7 @@ const preseededCache = {
     },
     "case study vanitas": {
         image: "https://media.kitsu.app/anime/poster_images/44241/large.jpg",
-        youtubeId: "DGlQWD3Krx8"
+        youtubeId: "6SeeQsGtiUU"
     },
     "cautious hero": {
         image: "https://media.kitsu.app/anime/poster_images/42079/large.jpg",
@@ -297,7 +297,7 @@ const preseededCache = {
     },
     "chaos;head": {
         image: "https://media.kitsu.app/anime/poster_images/3871/large.jpg",
-        youtubeId: "oikpZ8Wk-Hc"
+        youtubeId: "AvRq4T5Vw8A"
     },
     "cheat skill real w.": {
         image: "https://media.kitsu.app/anime/46370/poster_image/large-338a164d72dacaa07fc4b6ea58fa1efc.jpeg",
@@ -341,7 +341,7 @@ const preseededCache = {
     },
     "combatants dispatched": {
         image: "https://media.kitsu.app/anime/poster_images/43837/large.jpg",
-        youtubeId: "-uJdqz-fBl8"
+        youtubeId: "4tBf5lleoPs"
     },
     "cop craft": {
         image: "https://media.kitsu.app/anime/poster_images/42174/large.jpg",
@@ -349,15 +349,15 @@ const preseededCache = {
     },
     "cowboy bebop": {
         image: "https://cdn.myanimelist.net/images/anime/4/19644.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "ULCIHP5dc44"
     },
     "cyberpunk edgerun.": {
         image: "https://cdn.myanimelist.net/images/anime/1806/126216.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "JtqIas3bYhg"
     },
     "d.gray-man": {
         image: "https://media.kitsu.app/anime/poster_images/1328/large.jpg",
-        youtubeId: "MLsOM04Y7Qc"
+        youtubeId: "vpr20N0zDYI"
     },
     "d.gray-man hallow": {
         image: "https://media.kitsu.app/anime/poster_images/11654/large.jpg",
@@ -373,7 +373,7 @@ const preseededCache = {
     },
     "darling in franxx": {
         image: "https://media.kitsu.app/anime/poster_images/13600/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "xiNeXCUosSg"
     },
     "darwin's game": {
         image: "https://media.kitsu.app/anime/poster_images/42260/large.jpg",
@@ -393,7 +393,7 @@ const preseededCache = {
     },
     "date a live iv": {
         image: "https://media.kitsu.app/anime/43065/poster_image/large-7b10510948909a44b7d5291459598651.jpeg",
-        youtubeId: "Dvn0XsA73Yo"
+        youtubeId: "QQvYu9nXz1k"
     },
     "date a live v": {
         image: "https://media.kitsu.app/anime/46207/poster_image/large-e6636b192893172d0b5cacaa91427651.jpeg",
@@ -453,15 +453,15 @@ const preseededCache = {
     },
     "dr. stone": {
         image: "https://media.kitsu.app/anime/poster_images/42080/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "7JwyoE2jZM0"
     },
     "dragon ball super": {
         image: "https://media.kitsu.app/anime/poster_images/10879/large.jpg",
-        youtubeId: "nZKs2Sbx4iM"
+        youtubeId: "CFgEL7ei8VE"
     },
     "dragon ball z": {
         image: "https://media.kitsu.app/anime/720/poster_image/large-5cfc7e2756852e708c822df0a9f59871.jpeg",
-        youtubeId: "b5mKTXse_gQ"
+        youtubeId: "3jP2uONhR1A"
     },
     "drifters": {
         image: "https://media.kitsu.app/anime/poster_images/11028/large.jpg",
@@ -473,7 +473,7 @@ const preseededCache = {
     },
     "dungeon black co.": {
         image: "https://media.kitsu.app/anime/poster_images/43268/large.jpg",
-        youtubeId: "Dz55QzZxJWg"
+        youtubeId: "V9zVUK313XA"
     },
     "dungeon meshi": {
         image: "https://media.kitsu.app/anime/46320/poster_image/large-9d404bdee1ca826c60e32864e0502999.jpeg",
@@ -513,15 +513,15 @@ const preseededCache = {
     },
     "ergo proxy": {
         image: "https://media.kitsu.app/anime/705/poster_image/large-42da3a56d45a62e45bda5e1febfd31d3.jpeg",
-        youtubeId: "kL0j06Byjjs"
+        youtubeId: "jb3_pt4woi8"
     },
     "escaflowne": {
         image: "https://media.kitsu.app/anime/poster_images/360/large.jpg",
-        youtubeId: "bA1Kcn0RjFA"
+        youtubeId: "YNTYLr3PF-A"
     },
     "eureka seven": {
         image: "https://media.kitsu.app/anime/poster_images/212/large.jpg",
-        youtubeId: "UOJ7fXIJ_gQ"
+        youtubeId: "R1k-UJx_ZwU"
     },
     "evangelion": {
         image: "https://media.kitsu.app/anime/21/poster_image/large-9a3a9086a1b563e9e72d510118eb7d3c.jpeg",
@@ -573,7 +573,7 @@ const preseededCache = {
     },
     "flcl": {
         image: "https://media.kitsu.app/anime/202/poster_image/large-aaa4382e2d089a683af13bfd86aa4d34.jpeg",
-        youtubeId: "pKMzuuy_KQQ"
+        youtubeId: "iinIUcze1N8"
     },
     "fluffy paradise": {
         image: "https://media.kitsu.app/anime/46242/poster_image/large-5088f9430a3e5cbf613736987380fbf7.jpeg",
@@ -593,19 +593,19 @@ const preseededCache = {
     },
     "fruit of evolution": {
         image: "https://media.kitsu.app/anime/44024/poster_image/large-dd30bc6e1689ff421c42bf810fc10e8b.jpeg",
-        youtubeId: "P441kTYtx1Q"
+        youtubeId: "5ozTKCZpESA"
     },
     "fruits basket (19)": {
         image: "https://cdn.myanimelist.net/images/anime/1447/99827.jpg",
-        youtubeId: "sKpqU-AxB1o"
+        youtubeId: "Wz0P0mYYY0Q"
     },
     "fruits basket final": {
         image: "https://media.kitsu.app/anime/poster_images/43578/large.jpg",
-        youtubeId: "_uTvqumZBqY"
+        youtubeId: "DPEQxuMKGfE"
     },
     "fruits basket s2": {
         image: "https://media.kitsu.app/anime/poster_images/99/large.jpg",
-        youtubeId: "sKpqU-AxB1o"
+        youtubeId: "_nVe995f9HQ"
     },
     "fullmetal alchemist: b.": {
         image: "https://cdn.myanimelist.net/images/anime/1223/96541.jpg",
@@ -625,7 +625,7 @@ const preseededCache = {
     },
     "gamera rebirth": {
         image: "https://media.kitsu.app/anime/46754/poster_image/large-67ad296bdc9098968bba072ddf7ebe49.jpeg",
-        youtubeId: "Fzg9xm8Ow9Q"
+        youtubeId: "XNh3aRBoCPg"
     },
     "gantz": {
         image: "https://media.kitsu.app/anime/poster_images/351/large.jpg",
@@ -641,7 +641,7 @@ const preseededCache = {
     },
     "ghost in shell sac": {
         image: "https://media.kitsu.app/anime/poster_images/429/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "Gf6YFrV7zes"
     },
     "gintama": {
         image: "https://media.kitsu.app/anime/poster_images/818/large.jpg",
@@ -661,7 +661,7 @@ const preseededCache = {
     },
     "godzilla sp": {
         image: "https://media.kitsu.app/anime/poster_images/5314/large.jpg",
-        youtubeId: "DKhZkGHkow8"
+        youtubeId: "wUhyxRbLWbk"
     },
     "golden kamuy": {
         image: "https://media.kitsu.app/anime/13689/poster_image/large-3547826d837c5e36b05b8fbc27a8a23f.jpeg",
@@ -689,7 +689,7 @@ const preseededCache = {
     },
     "guilty crown": {
         image: "https://media.kitsu.app/anime/poster_images/6349/large.jpg",
-        youtubeId: "3prqSCE767c"
+        youtubeId: "JToS6gmWzgw"
     },
     "gundam 00": {
         image: "https://media.kitsu.app/anime/poster_images/2346/large.jpg",
@@ -701,11 +701,11 @@ const preseededCache = {
     },
     "gundam: ibo": {
         image: "https://cdn.myanimelist.net/images/anime/12/75889.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "zPIlyNTmPWc"
     },
     "gundam: witch merc.": {
         image: "https://media.kitsu.app/anime/45217/poster_image/large-b9851ba27827876261d83154bdb00d8f.jpeg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "mYd_l3E7yOc"
     },
     "gurren lagann": {
         image: "https://media.kitsu.app/anime/poster_images/1801/large.jpg",
@@ -725,7 +725,7 @@ const preseededCache = {
     },
     "hell's paradise": {
         image: "https://media.kitsu.app/anime/44012/poster_image/large-a82dcf6cbdfd5217530236ae5d8b100f.jpeg",
-        youtubeId: "8BIaDDN-r3o"
+        youtubeId: "y7qCjQIawRQ"
     },
     "hellsing": {
         image: "https://media.kitsu.app/anime/poster_images/245/large.jpg",
@@ -753,7 +753,7 @@ const preseededCache = {
     },
     "hitman reborn!": {
         image: "https://media.kitsu.app/anime/poster_images/1444/large.jpg",
-        youtubeId: "LS089oeLxio"
+        youtubeId: "iL4m2-nhOuI"
     },
     "honey and clover": {
         image: "https://media.kitsu.app/anime/poster_images/7/large.jpg",
@@ -761,7 +761,7 @@ const preseededCache = {
     },
     "horimiya": {
         image: "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
-        youtubeId: "W3dimUB-Rbo"
+        youtubeId: "b7ZYm_LEJ6Y"
     },
     "horimiya: missing": {
         image: "https://media.kitsu.app/anime/47234/poster_image/large-dab8478fa4627a9372b626920e68e521.jpeg",
@@ -769,7 +769,7 @@ const preseededCache = {
     },
     "hunter x hunter": {
         image: "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
-        youtubeId: "fda6QzBA2mI"
+        youtubeId: "d6kBeJjTGnY"
     },
     "hyouka": {
         image: "https://media.kitsu.app/anime/poster_images/6686/large.jpg",
@@ -873,7 +873,7 @@ const preseededCache = {
     },
     "killing slimes 300": {
         image: "https://media.kitsu.app/anime/poster_images/42628/large.jpg",
-        youtubeId: "_l5Wuv-2Pf4"
+        youtubeId: "UmjXZxKwpP0"
     },
     "kimi ni todoke": {
         image: "https://media.kitsu.app/anime/poster_images/4397/large.jpg",
@@ -949,7 +949,7 @@ const preseededCache = {
     },
     "legend of heroes": {
         image: "https://media.kitsu.app/anime/poster_images/2726/large.jpg",
-        youtubeId: "TIp9o_KJdSw"
+        youtubeId: "Rpz2R0WcGzY"
     },
     "level 2 cheat power": {
         image: "https://media.kitsu.app/anime/48125/poster_image/large-ef5945662e78d142bfc45726a0b506e0.jpeg",
@@ -993,7 +993,7 @@ const preseededCache = {
     },
     "madoka magica": {
         image: "https://media.kitsu.app/anime/poster_images/5853/large.jpg",
-        youtubeId: "pDS0uJUN-FI"
+        youtubeId: "6CTHwEZK2JA"
     },
     "magi: labyrinth": {
         image: "https://media.kitsu.app/anime/poster_images/7129/large.jpg",
@@ -1045,11 +1045,11 @@ const preseededCache = {
     },
     "mushoku tensei": {
         image: "https://cdn.myanimelist.net/images/anime/1530/117776.jpg",
-        youtubeId: "k5VxfJpzy1Q"
+        youtubeId: "La4AoJEqVg0"
     },
     "mushoku tensei s2": {
         image: "https://media.kitsu.app/anime/42323/poster_image/large-884ed9bb9ff6258dce8fc3b3bf569008.jpeg",
-        youtubeId: "k5VxfJpzy1Q"
+        youtubeId: "ts5NGoDI1V0"
     },
     "my dress-up darling": {
         image: "https://media.kitsu.app/anime/44382/poster_image/large-8ffc8ea9b6a1f9e79bc626e03baab167.jpeg",
@@ -1161,7 +1161,7 @@ const preseededCache = {
     },
     "ouran host club": {
         image: "https://media.kitsu.app/anime/poster_images/755/large.jpg",
-        youtubeId: "NcC5VCE2Its"
+        youtubeId: "rAjvIOWH1r4"
     },
     "outbreak company": {
         image: "https://media.kitsu.app/anime/poster_images/7837/large.jpg",
@@ -1169,7 +1169,7 @@ const preseededCache = {
     },
     "outlaw star": {
         image: "https://media.kitsu.app/anime/poster_images/7726/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "5eKfxY8c1d4"
     },
     "overlord": {
         image: "https://media.kitsu.app/anime/poster_images/9965/large.jpg",
@@ -1197,7 +1197,7 @@ const preseededCache = {
     },
     "parasyte: the maxim": {
         image: "https://media.kitsu.app/anime/poster_images/8147/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "2ilVWE9uw88"
     },
     "peach girl": {
         image: "https://media.kitsu.app/anime/poster_images/292/large.jpg",
@@ -1209,7 +1209,7 @@ const preseededCache = {
     },
     "platinum end": {
         image: "https://media.kitsu.app/anime/poster_images/43862/large.jpg",
-        youtubeId: "CVj14rLT1A8"
+        youtubeId: "M92v0sQWQTE"
     },
     "pluto": {
         image: "https://media.kitsu.app/anime/13563/poster_image/large-c9c3c5f6a72efc028633992765832c69.jpeg",
@@ -1233,11 +1233,11 @@ const preseededCache = {
     },
     "psycho-pass": {
         image: "https://media.kitsu.app/anime/poster_images/7000/large.jpg",
-        youtubeId: "70zW21l5ZUU"
+        youtubeId: "YzuJnyebc40"
     },
     "psycho-pass 2": {
         image: "https://media.kitsu.app/anime/poster_images/7863/large.jpg",
-        youtubeId: "V3BGQkRxPlQ"
+        youtubeId: "yonlsiyTLq8"
     },
     "psycho-pass 3": {
         image: "https://media.kitsu.app/anime/poster_images/42183/large.jpg",
@@ -1281,15 +1281,15 @@ const preseededCache = {
     },
     "re:monster": {
         image: "https://media.kitsu.app/anime/47964/poster_image/large-48b6b7fe2b3066d3d751ce2ff4709f87.jpeg",
-        youtubeId: "bWPnmrc-Nys"
+        youtubeId: "7ssm4nUotV8"
     },
     "re:zero": {
         image: "https://media.kitsu.app/anime/poster_images/11209/large.jpg",
-        youtubeId: "P_YtFPg9tNE"
+        youtubeId: "65BiDF9YdGg"
     },
     "re:zero s2": {
         image: "https://media.kitsu.app/anime/poster_images/11209/large.jpg",
-        youtubeId: "P_YtFPg9tNE"
+        youtubeId: "4JUOMAxcszs"
     },
     "re:zero s3": {
         image: "https://media.kitsu.app/anime/poster_images/11209/large.jpg",
@@ -1301,7 +1301,7 @@ const preseededCache = {
     },
     "realist hero": {
         image: "https://media.kitsu.app/anime/poster_images/43613/large.jpg",
-        youtubeId: "M_pWteehKzM"
+        youtubeId: "TtxhS5s8EIg"
     },
     "reborn master blade": {
         image: "https://media.kitsu.app/anime/45548/poster_image/large-3f09ae2812e1f6e84a5f44cb9dec10bf.jpeg",
@@ -1309,11 +1309,11 @@ const preseededCache = {
     },
     "reborn vending m.": {
         image: "https://media.kitsu.app/anime/46311/poster_image/large-cac78f3f22eb03a12f2f69f0fb9d91d9.jpeg",
-        youtubeId: "mMOzW_UEdvg"
+        youtubeId: "Cz5j9cRIL2A"
     },
     "record lodoss war": {
         image: "https://media.kitsu.app/anime/poster_images/183/large.jpg",
-        youtubeId: "CVc7JrTh6g0"
+        youtubeId: "0nnyTpNWB0g"
     },
     "reincarnated sword": {
         image: "https://media.kitsu.app/anime/45242/poster_image/large-ce2c4912a685f66cd817732873e69da4.jpeg",
@@ -1365,7 +1365,7 @@ const preseededCache = {
     },
     "sailor moon": {
         image: "https://media.kitsu.app/anime/489/poster_image/large-dcdc9fad1358e62c0632dd8ab0acab96.jpeg",
-        youtubeId: "pEX3tUb2sQo"
+        youtubeId: "UL_F6L1tSAM"
     },
     "sailor moon cosmos": {
         image: "https://media.kitsu.app/anime/46085/poster_image/large-c35e11820749de64838204a4e350a12f.jpeg",
@@ -1373,7 +1373,7 @@ const preseededCache = {
     },
     "sailor moon crystal": {
         image: "https://media.kitsu.app/anime/poster_images/7163/large.jpg",
-        youtubeId: "XAe7Buc3OjY"
+        youtubeId: "8DQN3vngAEs"
     },
     "saint seiya": {
         image: "https://media.kitsu.app/anime/poster_images/1129/large.jpg",
@@ -1461,7 +1461,7 @@ const preseededCache = {
     },
     "shikimori not cutie": {
         image: "https://media.kitsu.app/anime/44159/poster_image/large-1a50e56d81b75ab7add35d8ef252d8f6.jpeg",
-        youtubeId: "utyXdk4G0-w"
+        youtubeId: "Jx8FTxpmRTo"
     },
     "shy s1": {
         image: "https://media.kitsu.app/anime/poster_images/8629/large.jpg",
@@ -1481,7 +1481,7 @@ const preseededCache = {
     },
     "skeleton knight": {
         image: "https://media.kitsu.app/anime/44423/poster_image/large-e7360f7c716f776a3734f170facf6552.jpeg",
-        youtubeId: "8XkdWCVUusA"
+        youtubeId: "u_TQJHga6k8"
     },
     "skip and loafer": {
         image: "https://media.kitsu.app/anime/45520/poster_image/large-bc121442f312da08b24f1a56e2cb2040.jpeg",
@@ -1529,11 +1529,11 @@ const preseededCache = {
     },
     "space dandy": {
         image: "https://media.kitsu.app/anime/poster_images/7910/large.jpg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "0YVOjYPG2bQ"
     },
     "spice and wolf": {
         image: "https://media.kitsu.app/anime/poster_images/2684/large.jpg",
-        youtubeId: "mnCXgfrjn1k"
+        youtubeId: "zgCdZNIPylA"
     },
     "spice and wolf (24)": {
         image: "https://media.kitsu.app/anime/poster_images/2684/large.jpg",
@@ -1541,7 +1541,7 @@ const preseededCache = {
     },
     "spice and wolf ii": {
         image: "https://media.kitsu.app/anime/poster_images/4063/large.jpg",
-        youtubeId: "mnCXgfrjn1k"
+        youtubeId: "VD9grSiYcCI"
     },
     "spirit chron. s2": {
         image: "https://media.kitsu.app/anime/poster_images/238/large.jpg",
@@ -1593,7 +1593,7 @@ const preseededCache = {
     },
     "texhnolyze": {
         image: "https://media.kitsu.app/anime/poster_images/17/large.jpg",
-        youtubeId: "Z19QTGvwg9I"
+        youtubeId: "89pOg6LRmgo"
     },
     "the great cleric": {
         image: "https://media.kitsu.app/anime/46600/poster_image/large-b754bcb251e06937006bc1a23e9d1c54.jpeg",
@@ -1609,11 +1609,11 @@ const preseededCache = {
     },
     "to your eternity": {
         image: "https://media.kitsu.app/anime/poster_images/43211/large.jpg",
-        youtubeId: "WHq46obaDR8"
+        youtubeId: "oJg6BeGxl-c"
     },
     "to your eternity s2": {
         image: "https://media.kitsu.app/anime/poster_images/43211/large.jpg",
-        youtubeId: "WHq46obaDR8"
+        youtubeId: "g0rdH--726w"
     },
     "tokyo ghoul": {
         image: "https://cdn.myanimelist.net/images/anime/5/64449.jpg",
@@ -1621,7 +1621,7 @@ const preseededCache = {
     },
     "tokyo revengers": {
         image: "https://media.kitsu.app/anime/poster_images/43321/large.jpg",
-        youtubeId: "idlLFNNpZiI"
+        youtubeId: "Ehl2C1V05Bw"
     },
     "tomo-chan is girl!": {
         image: "https://media.kitsu.app/anime/46232/poster_image/large-5b8fad2fd5867754d9cb41fdc011f7df.jpeg",
@@ -1637,7 +1637,7 @@ const preseededCache = {
     },
     "tower of god": {
         image: "https://media.kitsu.app/anime/43004/poster_image/large-03a16e6cdf9abafff6642c76454e2903.jpeg",
-        youtubeId: "RNyClma6awo"
+        youtubeId: "O5Tw1cMS4Dk"
     },
     "trapped in dating s.": {
         image: "https://media.kitsu.app/anime/poster_images/6026/large.jpg",
@@ -1645,11 +1645,11 @@ const preseededCache = {
     },
     "trigun": {
         image: "https://media.kitsu.app/anime/3/poster_image/large-32a8adb71c80bf616527a1651b92e39f.jpeg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "2X23aw8qUOk"
     },
     "trigun stampede": {
         image: "https://media.kitsu.app/anime/46183/poster_image/large-18f01df516283259a59ae88e549918de.jpeg",
-        youtubeId: "EL-D9LrFJd4"
+        youtubeId: "AzZYXqUdp5o"
     },
     "tsukigakirei": {
         image: "https://media.kitsu.app/anime/poster_images/13234/large.jpg",
@@ -1745,7 +1745,7 @@ const preseededCache = {
     },
     "wrong way healing": {
         image: "https://media.kitsu.app/anime/44981/poster_image/large-4bf6166c44f4cfd702f990d6208f72f8.jpeg",
-        youtubeId: "UkPRnHQJrws"
+        youtubeId: "0L4CrSgaWvQ"
     },
     "yakitori": {
         image: "https://media.kitsu.app/anime/47268/poster_image/large-dbcab6b77459d7b85905973967b2913f.jpeg",
@@ -1769,7 +1769,7 @@ const preseededCache = {
     },
     "your lie in april": {
         image: "https://cdn.myanimelist.net/images/anime/3/67177.jpg",
-        youtubeId: "AbTfMbmucpI"
+        youtubeId: "FLS4TdJPFVQ"
     },
     "yu yu hakusho": {
         image: "https://media.kitsu.app/anime/poster_images/359/large.jpg",
@@ -2341,18 +2341,18 @@ const GENRE_TRAILER_POOLS = {
     "vGuQeQsoRgU", // Tokyo Ghoul
     "D5fYOnwYkj4", // My Hero Academia
     "CmTeYj2FmRc", // One Piece
-    "fda6QzBA2mI", // Hunter x Hunter
-    "dVPzv9qwKl0", // Berserk
+    "d6kBeJjTGnY", // Hunter x Hunter
+    "0MIw4xzxcTU", // Berserk
     "c3KGK09Uvdg"  // Kaiju No. 8
   ],
   Romance: [
     "rZ95aZmQu_8", // Kaguya-sama: Love is War
-    "W3dimUB-Rbo", // Horimiya
+    "b7ZYm_LEJ6Y", // Horimiya
     "ya570uUgQNc", // Toradora!
-    "AbTfMbmucpI", // Your Lie in April
+    "FLS4TdJPFVQ", // Your Lie in April
     "8oveGY6h6T8", // My Dress-Up Darling
     "QpyQ_0i2NU8", // Komi Can't Communicate
-    "sKpqU-AxB1o", // Fruits Basket
+    "Wz0P0mYYY0Q", // Fruits Basket
     "_yVedXph7Ig", // Bloom into You
     "zBm4JwAPz3o", // Blue Box
     "WiTwXIAcm5Q", // Clannad: After Story
@@ -2360,13 +2360,13 @@ const GENRE_TRAILER_POOLS = {
     "ukO-ZdWS3j8"  // Call of the Night
   ],
   Isekai: [
-    "k5VxfJpzy1Q", // Mushoku Tensei: Jobless Reincarnation
-    "P_YtFPg9tNE", // Re:Zero - Starting Life in Another World
+    "ts5NGoDI1V0", // Mushoku Tensei: Jobless Reincarnation
+    "65BiDF9YdGg", // Re:Zero - Starting Life in Another World
     "rTtfA9IiYHA", // That Time I Got Reincarnated as a Slime
     "NU87y-38glA", // KonoSuba
     "3jE9moHQePI", // Overlord
     "xoIaPNWLxy0", // Arifureta
-    "m3W8sZhn3-o", // Black Summoner
+    "JH1Bt-AAKlk", // Black Summoner
     "UZE4ZZiXBQY", // So I'm a Spider, So What?
     "BeyQ4hPDPUI", // 7th Time Loop
     "04__Am5v3ms", // Am I Actually the Strongest?
@@ -2375,7 +2375,7 @@ const GENRE_TRAILER_POOLS = {
   "Sci-Fi": [
     "27OZc-ku6is", // Steins;Gate
     "lG2WL9brJr0", // Akira
-    "EL-D9LrFJd4", // Cowboy Bebop / Cyberpunk
+    "ULCIHP5dc44", // Cowboy Bebop / Cyberpunk
     "NhExBlBnmQI", // Steins;Gate 0
     "6XcLqGVGObw", // A.I.C.O. Incarnation
     "Le80O3zYr0U", // Accel World
@@ -2388,13 +2388,13 @@ const GENRE_TRAILER_POOLS = {
     "qgQunxD0qCk", // Frieren: Beyond Journey's End
     "MuboGrmPDIg", // Made in Abyss
     "yb2R1l0O9Zs", // Fullmetal Alchemist: Brotherhood
-    "fda6QzBA2mI", // Hunter x Hunter
-    "PtGRj71HMFA", // Rage of Bahamut: Genesis
+    "d6kBeJjTGnY", // Hunter x Hunter
+    "pRl8j1PjShM", // Rage of Bahamut: Genesis
     "ayLq7BKjQZU", // Blue Exorcist
     "Xfw57amXb8Q", // Somali and the Forest Spirit
     "cCGLNfDm9Rg", // Delicious in Dungeon (Dungeon Meshi)
     "Kvy48qS48qQ", // To Your Eternity
-    "DGlQWD3Krx8"  // Case Study of Vanitas
+    "6SeeQsGtiUU"  // Case Study of Vanitas
   ]
 };
 
