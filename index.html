@@ -44,6 +44,12 @@
         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
       <input type="text" id="searchInput" placeholder="Search 444 anime by title or genre..." autocomplete="off" aria-label="Search anime shows by title or genre" />
+      <button class="search-clear-btn" id="searchClearBtn" type="button" aria-label="Clear search" style="display:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
@@ -130,6 +136,7 @@
   <main class="section-wrap">
     <div class="section-header">
       <div>
+        <span class="search-kicker" id="searchKicker" style="display:none;">SEARCH RESULTS</span>
         <h2 class="section-title" id="sectionTitle">Popular Anime</h2>
         <p class="section-subtitle" id="sectionSubtitle">Browse the complete verified collection</p>
       </div>

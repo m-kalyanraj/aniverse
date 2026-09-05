@@ -157,14 +157,44 @@ function renderGrid() {
   const filtered = getFiltered();
   const slice = filtered.slice(0, displayCount);
 
-  // Update Section Title & Count
-  if (sectionTitle) {
-    if (searchQuery.trim()) {
-      sectionTitle.textContent = `Search: "${searchQuery.trim()}"`;
-    } else if (currentGenre !== "all") {
-      sectionTitle.textContent = `${currentGenre} Anime`;
+  const isSearching = Boolean(searchQuery.trim());
+  const heroSpotlight = document.getElementById("heroSpotlight");
+  const trendingSection = document.getElementById("trendingSection");
+  const genreFilters = document.getElementById("genreFilters");
+  const searchKicker = document.getElementById("searchKicker");
+  const sectionSubtitle = document.getElementById("sectionSubtitle");
+
+  // Sync body class for clean CSS layout transition
+  if (isSearching) {
+    document.body.classList.add("search-active");
+  } else {
+    document.body.classList.remove("search-active");
+  }
+
+  // Seamlessly collapse hero, trending, and genre filters during search
+  if (heroSpotlight) {
+    heroSpotlight.style.display = isSearching ? "none" : "";
+  }
+  if (trendingSection) {
+    trendingSection.style.display = (isSearching || currentGenre !== "all") ? "none" : "";
+  }
+  if (genreFilters) {
+    genreFilters.style.display = isSearching ? "none" : "";
+  }
+
+  // Update Section Header & Count
+  if (isSearching) {
+    if (searchKicker) searchKicker.style.display = "inline-block";
+    if (sectionTitle) sectionTitle.textContent = `Search results for "${searchQuery.trim()}"`;
+    if (sectionSubtitle) sectionSubtitle.textContent = `${filtered.length} anime found`;
+  } else {
+    if (searchKicker) searchKicker.style.display = "none";
+    if (currentGenre !== "all") {
+      if (sectionTitle) sectionTitle.textContent = `${currentGenre} Anime`;
+      if (sectionSubtitle) sectionSubtitle.textContent = `Browse verified ${currentGenre.toLowerCase()} titles`;
     } else {
-      sectionTitle.textContent = "Popular Anime";
+      if (sectionTitle) sectionTitle.textContent = "Popular Anime";
+      if (sectionSubtitle) sectionSubtitle.textContent = "Browse the complete verified collection";
     }
   }
 
@@ -173,10 +203,19 @@ function renderGrid() {
   }
 
   if (slice.length === 0) {
+    const safeQ = searchQuery.trim().replace(/"/g, '&quot;');
     grid.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
-        <h3 style="font-size: 22px; color: #fff; margin-bottom: 8px;">No anime found</h3>
-        <p style="color: var(--muted); font-size: 14px;">Try searching for a different title or select another genre.</p>
+      <div class="empty-search-state">
+        <div class="empty-icon" aria-hidden="true">🔍</div>
+        <h3>No anime found</h3>
+        <p>No results found for <strong>"${safeQ}"</strong>. Try searching for a different title or genre.</p>
+        <button class="empty-clear-btn" type="button" onclick="clearSearch()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+          Clear Search
+        </button>
       </div>
     `;
     if (loadMoreBtn) loadMoreBtn.style.display = "none";
@@ -191,16 +230,6 @@ function renderGrid() {
       loadMoreBtn.style.display = "none";
     } else {
       loadMoreBtn.style.display = "inline-flex";
-    }
-  }
-
-  // Manage Trending Section visibility during active search or specific genre filter
-  const trendingSection = document.getElementById("trendingSection");
-  if (trendingSection) {
-    if (searchQuery.trim() || currentGenre !== "all") {
-      trendingSection.style.display = "none";
-    } else {
-      trendingSection.style.display = "";
     }
   }
 }
@@ -347,6 +376,28 @@ function closeTrailerModal() {
 window.closeTrailerModal = closeTrailerModal;
 
 // ==========================================================================
+// SEARCH CONTROLLER & CLEAR
+// ==========================================================================
+function clearSearch() {
+  const searchInput = document.getElementById("searchInput");
+  const searchClearBtn = document.getElementById("searchClearBtn");
+  if (searchInput) {
+    searchInput.value = "";
+  }
+  if (searchClearBtn) {
+    searchClearBtn.style.display = "none";
+  }
+  searchQuery = "";
+  displayCount = PAGE_SIZE; // reset pagination
+  document.body.classList.remove("search-active");
+  renderGrid();
+  if (searchInput) {
+    searchInput.focus();
+  }
+}
+window.clearSearch = clearSearch;
+
+// ==========================================================================
 // EVENT LISTENERS & INITIALIZATION
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -392,17 +443,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2. Real-time Search input listener with lightweight debounce
+  // 2. Real-time Search input listener with lightweight debounce and clear button
   const searchInput = document.getElementById("searchInput");
+  const searchClearBtn = document.getElementById("searchClearBtn");
   let searchDebounce = null;
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener("click", clearSearch);
+  }
+
   if (searchInput) {
     searchInput.addEventListener("input", e => {
+      const val = e.target.value;
+      if (searchClearBtn) {
+        searchClearBtn.style.display = val.trim() ? "inline-flex" : "none";
+      }
+
       clearTimeout(searchDebounce);
       searchDebounce = setTimeout(() => {
-        searchQuery = e.target.value;
+        searchQuery = val;
         displayCount = PAGE_SIZE; // reset pagination
         renderGrid();
-      }, 100);
+      }, 80);
+    });
+
+    searchInput.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        clearSearch();
+      }
     });
   }
 

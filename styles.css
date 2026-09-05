@@ -210,23 +210,26 @@ button {
 /* Search */
 .nav-search {
   flex: 1;
-  max-width: 480px;
+  max-width: 380px;
+  height: 38px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 10px 20px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  padding: 0 14px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: border-color var(--duration) var(--ease),
               box-shadow var(--duration) var(--ease),
               background var(--duration) var(--ease);
 }
 
 .nav-search:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 20px var(--accent-glow);
-  background: var(--bg3);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.18);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .nav-search svg {
@@ -245,13 +248,38 @@ button {
   outline: none;
   color: var(--text-bright);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13.5px;
   width: 100%;
   line-height: 1.4;
 }
 
 .nav-search input::placeholder {
-  color: var(--muted);
+  color: #71717a;
+  font-size: 13px;
+}
+
+.search-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-bright);
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background var(--duration) var(--ease),
+              color var(--duration) var(--ease),
+              transform var(--duration) var(--ease);
+}
+
+.search-clear-btn:hover {
+  background: rgba(99, 102, 241, 0.35);
+  color: #fff;
+  transform: scale(1.08);
 }
 
 /* Back button (watch page) */
@@ -726,14 +754,38 @@ button {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 32px 80px;
+  transition: padding var(--duration) var(--ease);
+}
+
+/* Active Search Layout State */
+body.search-active .section-wrap {
+  padding-top: 24px;
+}
+
+body.search-active #heroSpotlight,
+body.search-active #trendingSection,
+body.search-active #genreFilters {
+  display: none !important;
+}
+
+.search-kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--accent-soft);
+  margin-bottom: 4px;
 }
 
 .section-header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .section-title {
@@ -756,6 +808,62 @@ button {
   border-radius: var(--radius-full);
   border: 1px solid var(--border);
   white-space: nowrap;
+}
+
+/* Empty Search Results */
+.empty-search-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin: 20px auto 40px;
+}
+
+.empty-search-state .empty-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.empty-search-state h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+
+.empty-search-state p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.empty-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px var(--accent-glow);
+  transition: filter var(--duration) var(--ease),
+              transform var(--duration) var(--ease);
+}
+
+.empty-clear-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
 }
 
 .anime-grid {
@@ -1552,6 +1660,12 @@ button {
     display: none;
   }
 
+  .nav-search {
+    max-width: 280px;
+    height: 36px;
+    padding: 0 12px;
+  }
+
   .hero {
     padding: 44px 18px 32px;
   }
@@ -1666,7 +1780,9 @@ button {
   }
 
   .nav-search {
-    padding: 8px 16px;
+    max-width: 100%;
+    height: 36px;
+    padding: 0 12px;
     gap: 8px;
   }
 
@@ -1830,7 +1946,8 @@ button {
   }
 
   .nav-search {
-    padding: 7px 12px;
+    height: 34px;
+    padding: 0 10px;
   }
 }
 
