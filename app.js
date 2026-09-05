@@ -55,9 +55,155 @@ let idCounter = 1;
 // ---- State ----
 let currentGenre = "all";
 let searchQuery = "";
-let displayCount = 24;
+let currentPage = 1;
 const PAGE_SIZE = 24;
 let lastFocusedCard = null;
+
+// Read page from URL on startup
+try {
+  const urlParams = new URLSearchParams(window.location.search);
+  const p = parseInt(urlParams.get("page"), 10);
+  if (!isNaN(p) && p > 0) {
+    currentPage = p;
+  }
+} catch (e) {}
+
+function updateUrlPage(page) {
+  try {
+    const url = new URL(window.location.href);
+    if (page > 1) {
+      url.searchParams.set("page", page);
+    } else {
+      url.searchParams.delete("page");
+    }
+    window.history.pushState({ page }, "", url.toString());
+  } catch (e) {}
+}
+
+function scrollToCatalogue() {
+  const catalogue = document.querySelector(".section-wrap");
+  if (catalogue) {
+    const navbar = document.querySelector(".navbar");
+    const navHeight = navbar ? navbar.offsetHeight : 60;
+    const catalogueTop = catalogue.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+    window.scrollTo({
+      top: Math.max(0, catalogueTop),
+      behavior: "smooth"
+    });
+  }
+}
+
+function getPageNumbers(current, total) {
+  const pages = [];
+  if (total <= 7) {
+    for (let i = 1; i <= total; i++) pages.push(i);
+    return pages;
+  }
+
+  pages.push(1);
+
+  if (current <= 4) {
+    for (let i = 2; i <= 5; i++) pages.push(i);
+    pages.push("...");
+    pages.push(total);
+  } else if (current >= total - 3) {
+    pages.push("...");
+    for (let i = total - 4; i <= total; i++) pages.push(i);
+  } else {
+    pages.push("...");
+    pages.push(current - 1);
+    pages.push(current);
+    pages.push(current + 1);
+    pages.push("...");
+    pages.push(total);
+  }
+
+  return pages;
+}
+
+function renderPagination(current, total) {
+  const wrap = document.getElementById("paginationWrap");
+  if (!wrap) return;
+
+  if (total <= 1) {
+    wrap.style.display = "none";
+    wrap.innerHTML = "";
+    return;
+  }
+
+  wrap.style.display = "flex";
+
+  const prevDisabled = current <= 1;
+  const nextDisabled = current >= total;
+
+  const pageNumbers = getPageNumbers(current, total);
+  const desktopPagesHtml = pageNumbers.map(item => {
+    if (item === "...") {
+      return `<span class="pagination-page-btn ellipsis" aria-hidden="true">…</span>`;
+    }
+    const isActive = item === current;
+    return `
+      <button
+        class="pagination-page-btn ${isActive ? 'active' : ''}"
+        type="button"
+        data-page="${item}"
+        ${isActive ? 'aria-current="page"' : ''}
+        aria-label="Go to page ${item}"
+      >
+        ${item}
+      </button>
+    `;
+  }).join("");
+
+  wrap.innerHTML = `
+    <button
+      class="pagination-btn pagination-prev"
+      id="prevPageBtn"
+      type="button"
+      ${prevDisabled ? 'disabled aria-disabled="true"' : ''}
+      aria-label="Previous page"
+    >
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      <span>Previous</span>
+    </button>
+
+    <div class="pagination-pages" id="paginationPages">
+      ${desktopPagesHtml}
+    </div>
+
+    <div class="pagination-mobile-info" aria-live="polite">
+      Page <span class="current-page-num">${current}</span> of <span class="total-pages-num">${total}</span>
+    </div>
+
+    <button
+      class="pagination-btn pagination-next"
+      id="nextPageBtn"
+      type="button"
+      ${nextDisabled ? 'disabled aria-disabled="true"' : ''}
+      aria-label="Next page"
+    >
+      <span>Next</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  `;
+}
+
+function goToPage(pageNum, shouldScroll = false) {
+  const filtered = getFiltered();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+  if (pageNum < 1) pageNum = 1;
+  if (pageNum > totalPages) pageNum = totalPages;
+  if (pageNum === currentPage && !shouldScroll) return;
+
+  currentPage = pageNum;
+  updateUrlPage(currentPage);
+  renderGrid(shouldScroll);
+}
 
 // ---- Image Fallback Handler ----
 // Safely looks up anime by ID to generate stylized procedural vector SVG cover
@@ -146,16 +292,29 @@ function createCardHtml(anime) {
 }
 
 // ---- Render Anime Cards ----
-function renderGrid() {
+function renderGrid(shouldScroll = false) {
   const grid = document.getElementById("animeGrid");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
   const resultCount = document.getElementById("resultCount");
   const sectionTitle = document.getElementById("sectionTitle");
+  const paginationWrap = document.getElementById("paginationWrap");
 
   if (!grid) return;
 
   const filtered = getFiltered();
-  const slice = filtered.slice(0, displayCount);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+    updateUrlPage(currentPage);
+  }
+  if (currentPage < 1) {
+    currentPage = 1;
+    updateUrlPage(currentPage);
+  }
+
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = Math.min(startIndex + PAGE_SIZE, filtered.length);
+  const slice = filtered.slice(startIndex, endIndex);
 
   const isSearching = Boolean(searchQuery.trim());
   const heroSpotlight = document.getElementById("heroSpotlight");
@@ -199,7 +358,13 @@ function renderGrid() {
   }
 
   if (resultCount) {
-    resultCount.textContent = `Showing ${slice.length} of ${filtered.length} shows`;
+    if (filtered.length === 0) {
+      resultCount.textContent = "Showing 0 shows";
+    } else if (filtered.length <= PAGE_SIZE) {
+      resultCount.textContent = `Showing ${filtered.length} of ${filtered.length} shows`;
+    } else {
+      resultCount.textContent = `Showing ${startIndex + 1}–${endIndex} of ${filtered.length} shows`;
+    }
   }
 
   if (slice.length === 0) {
@@ -218,19 +383,20 @@ function renderGrid() {
         </button>
       </div>
     `;
-    if (loadMoreBtn) loadMoreBtn.style.display = "none";
+    if (paginationWrap) {
+      paginationWrap.style.display = "none";
+      paginationWrap.innerHTML = "";
+    }
     return;
   }
 
   grid.innerHTML = slice.map(anime => createCardHtml(anime)).join("");
 
-  // Manage Load More button visibility
-  if (loadMoreBtn) {
-    if (displayCount >= filtered.length) {
-      loadMoreBtn.style.display = "none";
-    } else {
-      loadMoreBtn.style.display = "inline-flex";
-    }
+  // Manage pagination controls
+  renderPagination(currentPage, totalPages);
+
+  if (shouldScroll) {
+    scrollToCatalogue();
   }
 }
 
@@ -388,9 +554,10 @@ function clearSearch() {
     searchClearBtn.style.display = "none";
   }
   searchQuery = "";
-  displayCount = PAGE_SIZE; // reset pagination
+  currentPage = 1;
+  updateUrlPage(1);
   document.body.classList.remove("search-active");
-  renderGrid();
+  renderGrid(false);
   if (searchInput) {
     searchInput.focus();
   }
@@ -462,8 +629,9 @@ document.addEventListener("DOMContentLoaded", () => {
       clearTimeout(searchDebounce);
       searchDebounce = setTimeout(() => {
         searchQuery = val;
-        displayCount = PAGE_SIZE; // reset pagination
-        renderGrid();
+        currentPage = 1;
+        updateUrlPage(1);
+        renderGrid(false);
       }, 80);
     });
 
@@ -485,8 +653,9 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("active");
 
       currentGenre = btn.getAttribute("data-genre") || "all";
-      displayCount = PAGE_SIZE; // reset pagination
-      renderGrid();
+      currentPage = 1;
+      updateUrlPage(1);
+      renderGrid(false);
     });
   }
 
@@ -511,14 +680,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Load more button
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener("click", () => {
-      displayCount += PAGE_SIZE;
-      renderGrid();
+  // 5. Numbered pagination event delegation
+  const paginationWrap = document.getElementById("paginationWrap");
+  if (paginationWrap) {
+    paginationWrap.addEventListener("click", e => {
+      const prevBtn = e.target.closest("#prevPageBtn");
+      if (prevBtn && !prevBtn.disabled) {
+        goToPage(currentPage - 1, true);
+        return;
+      }
+
+      const nextBtn = e.target.closest("#nextPageBtn");
+      if (nextBtn && !nextBtn.disabled) {
+        goToPage(currentPage + 1, true);
+        return;
+      }
+
+      const pageBtn = e.target.closest(".pagination-page-btn[data-page]");
+      if (pageBtn) {
+        const targetPage = parseInt(pageBtn.getAttribute("data-page"), 10);
+        if (!isNaN(targetPage) && targetPage !== currentPage) {
+          goToPage(targetPage, true);
+        }
+      }
     });
   }
+
+  // Handle browser back/forward history navigation
+  window.addEventListener("popstate", () => {
+    let p = 1;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const parsed = parseInt(params.get("page"), 10);
+      if (!isNaN(parsed) && parsed > 0) p = parsed;
+    } catch (e) {}
+    currentPage = p;
+    renderGrid(false);
+  });
 
   // 6. Modal Close Controls
   const closeBtn = document.getElementById("modalCloseBtn");
