@@ -410,9 +410,10 @@ button {
 .hero-spotlight-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://cdn.myanimelist.net/images/anime/10/47347.jpg');
+  background-color: var(--bg2);
   background-size: cover;
   background-position: center 25%;
+  background-repeat: no-repeat;
   filter: brightness(0.2) blur(3px) saturate(1.2);
   transform: scale(1.04);
   pointer-events: none;

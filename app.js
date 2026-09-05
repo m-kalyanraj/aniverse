@@ -235,7 +235,7 @@ function renderTrending() {
   trendingGrid.innerHTML = trendingItems.map((anime, idx) => {
     const safeTitle = anime.title.replace(/"/g, '&quot;');
     return `
-      <article class="trending-card" data-id="${anime.id}" tabindex="0" role="button" aria-label="Trending #${idx + 1}: ${safeTitle}">
+      <article class="trending-card" data-id="${anime.id}" tabindex="0" role="button" aria-label="Top Pick #${idx + 1}: ${safeTitle}">
         <span class="trend-rank-badge">#${idx + 1}</span>
         <div class="trending-poster-wrap">
           <img
@@ -353,6 +353,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Initial grid and trending render
   renderGrid();
   renderTrending();
+
+  // Set hero spotlight background from verified database entry
+  const heroBg = document.getElementById("heroSpotlightBg") || document.querySelector(".hero-spotlight-bg");
+  if (heroBg) {
+    const aot = animeList.find(a => a.title.toLowerCase() === "attack on titan");
+    if (aot && aot.image) {
+      heroBg.style.backgroundImage = `url("${aot.image}")`;
+    }
+  }
 
   // Hero Spotlight "Watch Trailer" button
   const heroTrailerBtn = document.getElementById("heroTrailerBtn");
