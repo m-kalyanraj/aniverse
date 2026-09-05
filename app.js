@@ -575,9 +575,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set hero spotlight background from verified database entry
   const heroBg = document.getElementById("heroSpotlightBg") || document.querySelector(".hero-spotlight-bg");
   if (heroBg) {
-    const aot = animeList.find(a => a.title.toLowerCase() === "attack on titan");
-    if (aot && aot.image) {
-      heroBg.style.backgroundImage = `url("${aot.image}")`;
+    const bleach = animeList.find(a => a.title.toLowerCase() === "bleach: tybw");
+    if (bleach && bleach.image) {
+      heroBg.style.backgroundImage = `url("${bleach.image}")`;
     }
   }
 
@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroTrailerBtn = document.getElementById("heroTrailerBtn");
   if (heroTrailerBtn) {
     heroTrailerBtn.addEventListener("click", () => {
-      openTrailerModal("Attack on Titan");
+      openTrailerModal("Bleach: TYBW");
     });
   }
 
