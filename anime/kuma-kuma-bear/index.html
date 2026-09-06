@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <title>Kuma Kuma Bear – Watch Trailer & Stream Episodes | AniVerse</title>
+  <meta name="description" content="A girl is sent to a fantasy world in a super-powered, cute bear suit, doing quests." />
+  <link rel="canonical" href="https://aniverseweb.netlify.app/anime/kuma-kuma-bear/" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="AniVerse" />
+  <meta property="og:type" content="video.tv_show" />
+  <meta property="og:url" content="https://aniverseweb.netlify.app/anime/kuma-kuma-bear/" />
+  <meta property="og:title" content="Kuma Kuma Bear – Watch Trailer & Stream on AniVerse" />
+  <meta property="og:description" content="A girl is sent to a fantasy world in a super-powered, cute bear suit, doing quests." />
+  <meta property="og:image" content="https://media.kitsu.app/anime/poster_images/43214/large.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://aniverseweb.netlify.app/anime/kuma-kuma-bear/" />
+  <meta name="twitter:title" content="Kuma Kuma Bear – Watch Trailer & Stream on AniVerse" />
+  <meta name="twitter:description" content="A girl is sent to a fantasy world in a super-powered, cute bear suit, doing quests." />
+  <meta name="twitter:image" content="https://media.kitsu.app/anime/poster_images/43214/large.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- AniVerse Core Stylesheet -->
+  <link rel="stylesheet" href="../../styles.css" />
+
+  <!-- Scoped Detail Page Component Styles -->
+  <style>
+    .breadcrumb-nav {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 0 24px;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      list-style: none;
+    }
+    .breadcrumb a {
+      color: var(--muted);
+      transition: color var(--duration) var(--ease);
+    }
+    .breadcrumb a:hover {
+      color: var(--text-bright);
+    }
+    .bc-sep {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 12px;
+      user-select: none;
+    }
+    .bc-current {
+      color: var(--text-bright);
+      font-weight: 500;
+    }
+    .detail-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 24px 80px;
+    }
+    .detail-hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+    }
+    .detail-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .detail-poster-wrap {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+    .detail-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .detail-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .detail-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .detail-badge-genre {
+      display: inline-flex;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      background: var(--accent-muted);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: var(--accent-soft);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .detail-badge-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .detail-badge-hd {
+      display: inline-flex;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .detail-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.8vw, 42px);
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .detail-source {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: -6px;
+    }
+    .detail-synopsis {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.75;
+      max-width: 720px;
+    }
+    .detail-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .detail-btn-trailer {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), background var(--duration) var(--ease);
+      box-shadow: 0 4px 18px var(--accent-glow);
+      text-decoration: none;
+    }
+    .detail-btn-trailer:hover {
+      transform: translateY(-2px);
+      background: #5558e6;
+      box-shadow: 0 8px 24px var(--accent-glow);
+      color: #fff;
+    }
+    .detail-btn-stream {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--surface);
+      color: var(--text-bright);
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), background var(--duration) var(--ease);
+      text-decoration: none;
+    }
+    .detail-btn-stream:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--border-hover);
+      color: #fff;
+    }
+    .detail-section {
+      margin-bottom: 56px;
+    }
+    .detail-section-header {
+      margin-bottom: 20px;
+    }
+    .detail-section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .detail-section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+    .detail-trailer-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7);
+    }
+    .detail-trailer-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .info-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+    .info-card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .info-card-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-bright);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .related-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+    }
+    .related-poster-wrap {
+      width: 100%;
+      aspect-ratio: 2/3;
+      overflow: hidden;
+      background: var(--bg3);
+      position: relative;
+    }
+    .related-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--ease);
+    }
+    .related-card:hover .related-poster {
+      transform: scale(1.04);
+    }
+    .related-info {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .related-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .related-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: auto;
+    }
+    .related-rating {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .detail-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+      }
+      .detail-poster-wrap {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+      .detail-content {
+        text-align: center;
+        align-items: center;
+      }
+      .detail-synopsis {
+        text-align: center;
+      }
+      .detail-actions {
+        justify-content: center;
+      }
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+    }
+    @media (max-width: 480px) {
+      .detail-container {
+        padding: 16px 16px 60px;
+      }
+      .breadcrumb-nav {
+        padding: 0 16px;
+      }
+      .detail-hero {
+        padding: 20px 16px;
+      }
+      .detail-poster-wrap {
+        max-width: 170px;
+      }
+      .detail-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .detail-btn-trailer,
+      .detail-btn-stream {
+        width: 100%;
+        justify-content: center;
+      }
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "TVSeries",
+            "@id": "https://aniverseweb.netlify.app/anime/kuma-kuma-bear/#series",
+            "name": "Kuma Kuma Bear",
+            "url": "https://aniverseweb.netlify.app/anime/kuma-kuma-bear/",
+            "image": "https://media.kitsu.app/anime/poster_images/43214/large.jpg",
+            "description": "A girl is sent to a fantasy world in a super-powered, cute bear suit, doing quests.",
+            "genre": "Isekai",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "7.1",
+                "bestRating": "10",
+                "worstRating": "1"
+            },
+            "trailer": {
+                "@type": "VideoObject",
+                "@id": "https://aniverseweb.netlify.app/anime/kuma-kuma-bear/#trailer",
+                "name": "Kuma Kuma Bear Official Trailer",
+                "description": "Official trailer for Kuma Kuma Bear on AniVerse.",
+                "thumbnailUrl": "https://media.kitsu.app/anime/poster_images/43214/large.jpg",
+                "embedUrl": "https://www.youtube.com/embed/_7PfIoacHjs"
+            }
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand-group">
+      <a class="nav-logo" href="../../index.html">Ani<span>Verse</span></a>
+      <span class="nav-badge">HD Discovery</span>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-back" href="../../index.html" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); font-weight:600;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Back to Catalogue
+      </a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB NAVIGATION -->
+  <div class="breadcrumb-nav">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="bc-sep" aria-hidden="true">/</li>
+        <li><a href="../../index.html">Anime</a></li>
+        <li class="bc-sep" aria-hidden="true">/</li>
+        <li class="bc-current" aria-current="page">Kuma Kuma Bear</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- MAIN DETAIL CONTENT -->
+  <main class="detail-container">
+
+    <!-- HERO SECTION -->
+    <header class="detail-hero">
+      <div class="detail-poster-wrap">
+        <img
+          class="detail-poster"
+          src="https://media.kitsu.app/anime/poster_images/43214/large.jpg"
+          alt="Kuma Kuma Bear Poster"
+          width="280"
+          height="420"
+          loading="eager"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-badges">
+          <span class="detail-badge-genre">Isekai</span>
+          <span class="detail-badge-rating">★ 7.1</span>
+          <span class="detail-badge-hd">HD Official</span>
+        </div>
+
+        <h1 class="detail-title">Kuma Kuma Bear</h1>
+        <p class="detail-source">Kuma Kuma Kuma Bear by Sergey</p>
+
+        <p class="detail-synopsis">A girl is sent to a fantasy world in a super-powered, cute bear suit, doing quests.</p>
+
+        <div class="detail-actions">
+          <a class="detail-btn-trailer" href="#featuredTrailer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Watch Trailer
+          </a>
+          <a class="detail-btn-stream" href="/watch.html?id=Kuma%20Kuma%20Bear">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+              <line x1="7" y1="2" x2="7" y2="22"/>
+              <line x1="17" y1="2" x2="17" y2="22"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <line x1="2" y1="7" x2="7" y2="7"/>
+              <line x1="2" y1="17" x2="7" y2="17"/>
+              <line x1="17" y1="17" x2="22" y2="17"/>
+              <line x1="17" y1="7" x2="22" y2="7"/>
+            </svg>
+            Stream Episodes
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURED TRAILER SECTION -->
+    <section class="detail-section" id="featuredTrailer">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">Official Trailer</h2>
+      </div>
+      <div class="detail-trailer-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/_7PfIoacHjs?rel=0&modestbranding=1"
+          title="Kuma Kuma Bear Official Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ANIME SPECIFICATION / INFORMATION -->
+    <section class="detail-section">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">Anime Information</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-label">Original Title</div>
+          <div class="info-card-value">Kuma Kuma Bear</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Primary Genre</div>
+          <div class="info-card-value">Isekai</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Community Rating</div>
+          <div class="info-card-value">★ 7.1 / 10</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Story & Source</div>
+          <div class="info-card-value">Kuma Kuma Kuma Bear by Sergey</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Audio Availability</div>
+          <div class="info-card-value">Subtitled & Dubbed (HD)</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Trailer Status</div>
+          <div class="info-card-value">Verified 1080p HD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED ANIME SECTION -->
+    <section class="detail-section">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">More Isekai Anime</h2>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="/anime/slime-isekai/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://media.kitsu.app/anime/poster_images/41024/large.jpg"
+              alt="Slime Isekai Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Slime Isekai</h3>
+            <div class="related-meta">
+              <span>Isekai</span>
+              <span class="related-rating">★ 8.1</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/re-zero/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://media.kitsu.app/anime/poster_images/11209/large.jpg"
+              alt="Re:Zero Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Re:Zero</h3>
+            <div class="related-meta">
+              <span>Isekai</span>
+              <span class="related-rating">★ 8.2</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/konosuba/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/9/77484.jpg"
+              alt="KonoSuba Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">KonoSuba</h3>
+            <div class="related-meta">
+              <span>Isekai</span>
+              <span class="related-rating">★ 8.1</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/mushoku-tensei/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/1530/117776.jpg"
+              alt="Mushoku Tensei Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Mushoku Tensei</h3>
+            <div class="related-meta">
+              <span>Isekai</span>
+              <span class="related-rating">★ 8.4</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/overlord/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://media.kitsu.app/anime/poster_images/9965/large.jpg"
+              alt="Overlord Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Overlord</h3>
+            <div class="related-meta">
+              <span>Action</span>
+              <span class="related-rating">★ 7.9</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/shield-hero/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://media.kitsu.app/anime/poster_images/13593/large.jpg"
+              alt="Shield Hero Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Shield Hero</h3>
+            <div class="related-meta">
+              <span>Action</span>
+              <span class="related-rating">★ 7.8</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Ani<span>Verse</span> © 2026. Discover, watch trailers, and stream real anime.</p>
+  </footer>
+
+</body>
+</html>

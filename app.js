@@ -248,6 +248,10 @@ function getFiltered() {
 // Generate single card HTML safely
 function createCardHtml(anime) {
   const safeTitle = anime.title.replace(/"/g, '&quot;');
+  const slug = typeof slugify === "function"
+    ? slugify(anime.title)
+    : anime.title.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
   return `
     <article class="anime-card" data-id="${anime.id}" tabindex="0" role="button" aria-label="Watch trailer for ${safeTitle}">
       <div class="card-poster-wrap">
@@ -286,6 +290,12 @@ function createCardHtml(anime) {
             Trailer
           </span>
         </div>
+        <a class="card-details-btn" href="/anime/${slug}/" aria-label="View details for ${safeTitle}">
+          Details
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
       </div>
     </article>
   `;
@@ -663,6 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("animeGrid");
   if (grid) {
     grid.addEventListener("click", e => {
+      if (e.target.closest(".card-details-btn")) return;
       const card = e.target.closest(".anime-card");
       if (!card) return;
       const id = card.getAttribute("data-id");
@@ -670,6 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     grid.addEventListener("keydown", e => {
+      if (e.target.closest(".card-details-btn")) return;
       if (e.key === "Enter" || e.key === " ") {
         const card = e.target.closest(".anime-card");
         if (!card) return;

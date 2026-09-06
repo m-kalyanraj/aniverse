@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <title>7th Time Loop – Watch Trailer & Stream Episodes | AniVerse</title>
+  <meta name="description" content="A girl starts her seventh reincarnation, marrying the crown prince who killed her in past loops." />
+  <link rel="canonical" href="https://aniverseweb.netlify.app/anime/7th-time-loop/" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="AniVerse" />
+  <meta property="og:type" content="video.tv_show" />
+  <meta property="og:url" content="https://aniverseweb.netlify.app/anime/7th-time-loop/" />
+  <meta property="og:title" content="7th Time Loop – Watch Trailer & Stream on AniVerse" />
+  <meta property="og:description" content="A girl starts her seventh reincarnation, marrying the crown prince who killed her in past loops." />
+  <meta property="og:image" content="https://media.kitsu.app/anime/47874/poster_image/large-b3cf3a7145a20acd63add2f66a3c7e15.jpeg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://aniverseweb.netlify.app/anime/7th-time-loop/" />
+  <meta name="twitter:title" content="7th Time Loop – Watch Trailer & Stream on AniVerse" />
+  <meta name="twitter:description" content="A girl starts her seventh reincarnation, marrying the crown prince who killed her in past loops." />
+  <meta name="twitter:image" content="https://media.kitsu.app/anime/47874/poster_image/large-b3cf3a7145a20acd63add2f66a3c7e15.jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- AniVerse Core Stylesheet -->
+  <link rel="stylesheet" href="../../styles.css" />
+
+  <!-- Scoped Detail Page Component Styles -->
+  <style>
+    .breadcrumb-nav {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 0 24px;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      list-style: none;
+    }
+    .breadcrumb a {
+      color: var(--muted);
+      transition: color var(--duration) var(--ease);
+    }
+    .breadcrumb a:hover {
+      color: var(--text-bright);
+    }
+    .bc-sep {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 12px;
+      user-select: none;
+    }
+    .bc-current {
+      color: var(--text-bright);
+      font-weight: 500;
+    }
+    .detail-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 24px 80px;
+    }
+    .detail-hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+    }
+    .detail-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .detail-poster-wrap {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+    .detail-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .detail-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .detail-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .detail-badge-genre {
+      display: inline-flex;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      background: var(--accent-muted);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: var(--accent-soft);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .detail-badge-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .detail-badge-hd {
+      display: inline-flex;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .detail-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.8vw, 42px);
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .detail-source {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: -6px;
+    }
+    .detail-synopsis {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.75;
+      max-width: 720px;
+    }
+    .detail-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .detail-btn-trailer {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), background var(--duration) var(--ease);
+      box-shadow: 0 4px 18px var(--accent-glow);
+      text-decoration: none;
+    }
+    .detail-btn-trailer:hover {
+      transform: translateY(-2px);
+      background: #5558e6;
+      box-shadow: 0 8px 24px var(--accent-glow);
+      color: #fff;
+    }
+    .detail-btn-stream {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--surface);
+      color: var(--text-bright);
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), background var(--duration) var(--ease);
+      text-decoration: none;
+    }
+    .detail-btn-stream:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--border-hover);
+      color: #fff;
+    }
+    .detail-section {
+      margin-bottom: 56px;
+    }
+    .detail-section-header {
+      margin-bottom: 20px;
+    }
+    .detail-section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .detail-section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+    .detail-trailer-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7);
+    }
+    .detail-trailer-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .info-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+    .info-card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .info-card-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-bright);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .related-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+    }
+    .related-poster-wrap {
+      width: 100%;
+      aspect-ratio: 2/3;
+      overflow: hidden;
+      background: var(--bg3);
+      position: relative;
+    }
+    .related-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--ease);
+    }
+    .related-card:hover .related-poster {
+      transform: scale(1.04);
+    }
+    .related-info {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .related-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .related-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: auto;
+    }
+    .related-rating {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .detail-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+      }
+      .detail-poster-wrap {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+      .detail-content {
+        text-align: center;
+        align-items: center;
+      }
+      .detail-synopsis {
+        text-align: center;
+      }
+      .detail-actions {
+        justify-content: center;
+      }
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+    }
+    @media (max-width: 480px) {
+      .detail-container {
+        padding: 16px 16px 60px;
+      }
+      .breadcrumb-nav {
+        padding: 0 16px;
+      }
+      .detail-hero {
+        padding: 20px 16px;
+      }
+      .detail-poster-wrap {
+        max-width: 170px;
+      }
+      .detail-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .detail-btn-trailer,
+      .detail-btn-stream {
+        width: 100%;
+        justify-content: center;
+      }
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "TVSeries",
+            "@id": "https://aniverseweb.netlify.app/anime/7th-time-loop/#series",
+            "name": "7th Time Loop",
+            "url": "https://aniverseweb.netlify.app/anime/7th-time-loop/",
+            "image": "https://media.kitsu.app/anime/47874/poster_image/large-b3cf3a7145a20acd63add2f66a3c7e15.jpeg",
+            "description": "A girl starts her seventh reincarnation, marrying the crown prince who killed her in past loops.",
+            "genre": "Romance",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "7.7",
+                "bestRating": "10",
+                "worstRating": "1"
+            },
+            "trailer": {
+                "@type": "VideoObject",
+                "@id": "https://aniverseweb.netlify.app/anime/7th-time-loop/#trailer",
+                "name": "7th Time Loop Official Trailer",
+                "description": "Official trailer for 7th Time Loop on AniVerse.",
+                "thumbnailUrl": "https://media.kitsu.app/anime/47874/poster_image/large-b3cf3a7145a20acd63add2f66a3c7e15.jpeg",
+                "embedUrl": "https://www.youtube.com/embed/BeyQ4hPDPUI"
+            }
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand-group">
+      <a class="nav-logo" href="../../index.html">Ani<span>Verse</span></a>
+      <span class="nav-badge">HD Discovery</span>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-back" href="../../index.html" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); font-weight:600;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Back to Catalogue
+      </a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB NAVIGATION -->
+  <div class="breadcrumb-nav">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="bc-sep" aria-hidden="true">/</li>
+        <li><a href="../../index.html">Anime</a></li>
+        <li class="bc-sep" aria-hidden="true">/</li>
+        <li class="bc-current" aria-current="page">7th Time Loop</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- MAIN DETAIL CONTENT -->
+  <main class="detail-container">
+
+    <!-- HERO SECTION -->
+    <header class="detail-hero">
+      <div class="detail-poster-wrap">
+        <img
+          class="detail-poster"
+          src="https://media.kitsu.app/anime/47874/poster_image/large-b3cf3a7145a20acd63add2f66a3c7e15.jpeg"
+          alt="7th Time Loop Poster"
+          width="280"
+          height="420"
+          loading="eager"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-badges">
+          <span class="detail-badge-genre">Romance</span>
+          <span class="detail-badge-rating">★ 7.7</span>
+          <span class="detail-badge-hd">HD Official</span>
+        </div>
+
+        <h1 class="detail-title">7th Time Loop</h1>
+        <p class="detail-source">7th Time Loop by Touko Amekawa & Hinoki Kino</p>
+
+        <p class="detail-synopsis">A girl starts her seventh reincarnation, marrying the crown prince who killed her in past loops.</p>
+
+        <div class="detail-actions">
+          <a class="detail-btn-trailer" href="#featuredTrailer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Watch Trailer
+          </a>
+          <a class="detail-btn-stream" href="/watch.html?id=7th%20Time%20Loop">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+              <line x1="7" y1="2" x2="7" y2="22"/>
+              <line x1="17" y1="2" x2="17" y2="22"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <line x1="2" y1="7" x2="7" y2="7"/>
+              <line x1="2" y1="17" x2="7" y2="17"/>
+              <line x1="17" y1="17" x2="22" y2="17"/>
+              <line x1="17" y1="7" x2="22" y2="7"/>
+            </svg>
+            Stream Episodes
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURED TRAILER SECTION -->
+    <section class="detail-section" id="featuredTrailer">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">Official Trailer</h2>
+      </div>
+      <div class="detail-trailer-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/BeyQ4hPDPUI?rel=0&modestbranding=1"
+          title="7th Time Loop Official Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ANIME SPECIFICATION / INFORMATION -->
+    <section class="detail-section">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">Anime Information</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-label">Original Title</div>
+          <div class="info-card-value">7th Time Loop</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Primary Genre</div>
+          <div class="info-card-value">Romance</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Community Rating</div>
+          <div class="info-card-value">★ 7.7 / 10</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Story & Source</div>
+          <div class="info-card-value">7th Time Loop by Touko Amekawa & Hinoki Kino</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Audio Availability</div>
+          <div class="info-card-value">Subtitled & Dubbed (HD)</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Trailer Status</div>
+          <div class="info-card-value">Verified 1080p HD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED ANIME SECTION -->
+    <section class="detail-section">
+      <div class="detail-section-header">
+        <h2 class="detail-section-title">More Romance Anime</h2>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="/anime/kaguya-sama/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/1295/106551.jpg"
+              alt="Kaguya-sama Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Kaguya-sama</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.4</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/horimiya/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/1695/111486.jpg"
+              alt="Horimiya Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Horimiya</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.2</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/toradora/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/13/22128.jpg"
+              alt="Toradora! Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Toradora!</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.1</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/fruits-basket-19/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/1447/99827.jpg"
+              alt="Fruits Basket (19) Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Fruits Basket (19)</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.2</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/your-lie-in-april/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://cdn.myanimelist.net/images/anime/3/67177.jpg"
+              alt="Your Lie in April Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">Your Lie in April</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.7</span>
+            </div>
+          </div>
+        </a>
+        <a class="related-card" href="/anime/my-dress-up-darling/">
+          <div class="related-poster-wrap">
+            <img
+              class="related-poster"
+              src="https://media.kitsu.app/anime/44382/poster_image/large-8ffc8ea9b6a1f9e79bc626e03baab167.jpeg"
+              alt="My Dress-Up Darling Poster"
+              loading="lazy"
+              width="200"
+              height="300"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="related-info">
+            <h3 class="related-title">My Dress-Up Darling</h3>
+            <div class="related-meta">
+              <span>Romance</span>
+              <span class="related-rating">★ 8.3</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Ani<span>Verse</span> © 2026. Discover, watch trailers, and stream real anime.</p>
+  </footer>
+
+</body>
+</html>
